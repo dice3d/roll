@@ -29,13 +29,13 @@ function dice_initialize(container) {
         on_set_change();
     });
 
-    var box = new $t.dice.dice_box(canvas, { w: 90, h: 160 });
+    var box = new $t.dice.dice_box(canvas, { w: 400, h: 300 });
     box.animate_selector = false;
 
     $t.bind(window, 'resize', function() {
         canvas.style.width = window.innerWidth - 1 + 'px';
         canvas.style.height = window.innerHeight - 1 + 'px';
-        box.reinit(canvas, { w: 90, h: 160 });
+        box.reinit(canvas, { w: 400, h: 300 });
     });
 
     function show_selector() {
